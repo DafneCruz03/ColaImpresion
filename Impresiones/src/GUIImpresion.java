@@ -6,14 +6,20 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class GUIImpresion extends JFrame {
 
 	private JPanel contentPane;
+	int opcion = 0;
+	int nodo_info = 0;
+	Cola cola = new Cola();// objeto y contadores para el nodo
 
 	/**
 	 * Launch the application.
@@ -64,10 +70,24 @@ public class GUIImpresion extends JFrame {
 		contentPane.add(btnImp);
 		
 		JButton btnVaciar = new JButton("Vaciar");
+		btnVaciar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cola.VaciarCola(nodo_info);
+			}
+		});
 		btnVaciar.setBounds(288, 205, 91, 21);
 		contentPane.add(btnVaciar);
 		
 		JButton btnVer = new JButton("Cola de impresion (pendientes)");
+		btnVer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (!cola.ColaVacia()) {
+					cola.MostrarCola();
+				}else {
+					JOptionPane.showMessageDialog(null, "No hay impresiones pendientes");
+				}
+			}
+		});
 		btnVer.setBounds(29, 205, 249, 21);
 		contentPane.add(btnVer);
 	}
