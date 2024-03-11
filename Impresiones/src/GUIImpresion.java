@@ -42,6 +42,7 @@ public class GUIImpresion extends JFrame {
 	 * Create the frame.
 	 */
 	public GUIImpresion() {
+		setTitle("Sistema de impresion");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 419, 300);
 		contentPane = new JPanel();
