@@ -1,3 +1,4 @@
+import javax.swing.JOptionPane;
 
 public class Cola {
 	private Nodo inicioCola, finalCola;
@@ -16,4 +17,46 @@ public class Cola {
 			return false;
 		}
 	}//finMetodo la cola vacia nos servira para verificar que no haya archivos pendientes 
+	//insertaralaCola
+			public void Insertar(int info) {
+				Nodo nuevo = new Nodo();
+				nuevo.info=info;
+				nuevo.siguiente=null;
+				
+				if (ColaVacia()) {
+					inicioCola =  nuevo;
+					finalCola = nuevo;
+				}else {
+					finalCola.siguiente=nuevo;
+					finalCola=nuevo;
+				}
+			}//finMetodo
+			
+			//imprimir(salir)delaCola
+			
+			public int Extraer() {
+				if (!ColaVacia()) {
+					int info = inicioCola.info;
+					
+					if (inicioCola == finalCola) {
+						inicioCola=null;
+						finalCola=null;
+					}else {
+						inicioCola=inicioCola.siguiente;
+					}
+					return info;
+				}else {
+					return Integer.MAX_VALUE;
+				}
+			}//finMetodo
+			//Necesitamos un metodo para vaciar la cola (como cuando se traban)
+			public void VaciarCola(int info) {
+				info=0;
+				inicioCola=null;
+				finalCola=null;
+				JOptionPane.showMessageDialog(null, "La cola de impresion se ha vaciado correctamente");
+				//declaro la variable vacias para dar entender que ya no hay elementos,
+			}
+
+			
 }
