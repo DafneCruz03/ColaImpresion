@@ -73,7 +73,7 @@ public class Cola {
 				String cadena[] = Cola.split(" ");
 				
 				for (int i=cadena.length-1; i>=0; i--) {
-					ColaInvertida += " " +cadena[i];
+					ColaInvertida += "Archivos pendientes (en números): " +cadena[i];
 				}//contador
 				
 				JOptionPane.showMessageDialog(null, ColaInvertida);
