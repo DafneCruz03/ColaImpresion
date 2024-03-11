@@ -33,6 +33,7 @@ public class GUIImpresion extends JFrame {
 		});
 	}
 //holaaaaaaaaaaaaaaaaaaaa
+	//pruebarama
 	/**
 	 * Create the frame.
 	 */
