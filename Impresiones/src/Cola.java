@@ -58,6 +58,26 @@ public class Cola {
 				//declaro la variable vacias para dar entender que ya no hay elementos, y al mismo tiempo mando el mensaje de que ya no hay elementos.
 				//falta el metodo de pendiente
 			}
-
+			
+			//mostrarCola
+			public void MostrarCola() {
+				Nodo recorrido = inicioCola;
+				String ColaInvertida = "";
+				
+				//ciclo
+				while(recorrido!=null) {
+					Cola += recorrido.info;
+					recorrido = recorrido.siguiente;
+				}//finCiclo
+				
+				String cadena[] = Cola.split(" ");
+				
+				for (int i=cadena.length-1; i>=0; i--) {
+					ColaInvertida += " " +cadena[i];
+				}//contador
+				
+				JOptionPane.showMessageDialog(null, ColaInvertida);
+				Cola = " ";
+			}//finMetodo
 			
 }

@@ -14,6 +14,10 @@ import javax.swing.ImageIcon;
 public class GUIImpresion extends JFrame {
 
 	private JPanel contentPane;
+	int opcion = 0;
+	int nodo_info = 0;
+	Cola cola = new Cola();
+	// objeto y contadores para el nodo
 
 	/**
 	 * Launch the application.
