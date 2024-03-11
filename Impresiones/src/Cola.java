@@ -33,6 +33,7 @@ public class Cola {
 		}//finMetodo
 		
 		//imprimir(salir)delaCola
+		
 		public int Extraer() {
 			if (!ColaVacia()) {
 				int info = inicioCola.info;
