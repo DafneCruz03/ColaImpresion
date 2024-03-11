@@ -10,6 +10,8 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class GUIImpresion extends JFrame {
 
@@ -30,7 +32,7 @@ public class GUIImpresion extends JFrame {
 			}
 		});
 	}
-
+//holaaaaaaaaaaaaaaaaaaaa
 	/**
 	 * Create the frame.
 	 */
@@ -44,6 +46,10 @@ public class GUIImpresion extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnMandar = new JButton("Mandar archivo a la cola de impresion");
+		btnMandar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnMandar.setBounds(29, 167, 249, 21);
 		contentPane.add(btnMandar);
 		
