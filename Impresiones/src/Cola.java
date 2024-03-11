@@ -55,7 +55,8 @@ public class Cola {
 				inicioCola=null;
 				finalCola=null;
 				JOptionPane.showMessageDialog(null, "La cola de impresion se ha vaciado correctamente");
-				//declaro la variable vacias para dar entender que ya no hay elementos,
+				//declaro la variable vacias para dar entender que ya no hay elementos, y al mismo tiempo mando el mensaje de que ya no hay elementos.
+				//falta el metodo de pendiente
 			}
 
 			
